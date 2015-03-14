@@ -1,9 +1,11 @@
 package com.example.piyush.baby;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class Home extends ActionBarActivity {
@@ -35,5 +37,10 @@ public class Home extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void showMap(View view){
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
     }
 }
