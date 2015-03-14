@@ -11,10 +11,16 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/headerText" />
 
+    <!--<AutoCompleteTextView android:id="@+id/email" android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" android:hint="Email"-->
+        <!--android:inputType="textEmailAddress" android:maxLines="1"-->
+        <!--android:singleLine="true" />-->
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
+        android:hint="Email"
         android:ems="10"
         android:id="@+id/emailId"
         android:layout_below="@+id/headerText"
@@ -34,10 +40,11 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="@string/loginButton"
         android:id="@+id/login"
         android:layout_below="@+id/password"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="25dp"
+        android:onClick="login" />
 
 </RelativeLayout>

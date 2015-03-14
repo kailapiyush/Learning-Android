@@ -4,5 +4,6 @@
     <string name="app_name">baby</string>
     <string name="header">I\'m playing...\n   Hahaha...</string>
     <string name="action_settings">Settings</string>
+    <string name="loginButton">Login</string>
 
 </resources>

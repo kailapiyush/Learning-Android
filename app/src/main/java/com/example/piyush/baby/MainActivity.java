@@ -1,10 +1,14 @@
 package com.example.piyush.baby;
 
 import android.app.Activity;
+import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
@@ -51,5 +55,18 @@ public class MainActivity extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         System.out.println("Activity destroyed...");
+    }
+
+    public void login(View view){
+        System.out.println("Login touched...");
+        EditText email = (EditText) findViewById(R.id.emailId);
+        EditText password = (EditText) findViewById(R.id.password);
+        Context context = getApplicationContext();
+        CharSequence message = "Login details incorrect...";
+        int duration = Toast.LENGTH_SHORT;
+        if (email.getText().toString().equals("pgkaila@gmail.com") && password.getText().toString().equals("123")){
+            message = "Login details correct...";
+        }
+        Toast.makeText(context, message, duration).show();
     }
 }
