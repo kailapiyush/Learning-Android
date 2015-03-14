@@ -16,6 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".home"
+            android:label="@string/title_activity_home"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.piyush.baby.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Home"
+            android:label="@string/title_activity_home" >
+        </activity>
     </application>
 
 </manifest>

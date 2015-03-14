@@ -2,6 +2,7 @@ package com.example.piyush.baby;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -66,6 +67,8 @@ public class MainActivity extends Activity {
         int duration = Toast.LENGTH_SHORT;
         if (email.getText().toString().equals("pgkaila@gmail.com") && password.getText().toString().equals("123")){
             message = "Login details correct...";
+            Intent intent = new Intent(this, Home.class);
+            startActivity(intent);
         }
         Toast.makeText(context, message, duration).show();
     }
